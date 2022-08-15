@@ -10,12 +10,12 @@ class Die(object):
         self._pip = pip
 
     def get_image(self):
-        return ("y" if self.is_clicked else "w") + str(self._pip) + ".jpg"
+        return ("y" if self.is_clicked else "w") + str(self._pip) + ".jpg" #uses is_clicked to determine die color
 
     def get_pip(self):
         return self._pip
 
     def roll_die(self):
-        self._pip = random.choice(
-            [1, 2, 3, 4, 5, 6])  # uses random's .choice method to select a random number from 1 to 6
+        #self._pip = 6
+        self._pip = random.choice([1, 2, 3, 4, 5, 6])  # uses random's .choice method to select a random number from 1 to 6
         self.is_clicked = False  # set to the white unclicked state
